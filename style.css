@@ -1,0 +1,694 @@
+/* Comentarios: alt + shift + a
+Seleccionar: shift + flechitas
+Mover: alt + flechitas */
+
+
+/* ---------- Imports ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+
+/* MOBILE*/
+
+/* ---------- Body ---------- */
+body {
+    /*  font-family: 'Open Sans', sans-serif; */
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    /*   background: rgb(238,174,202);
+    background: radial-gradient(circle, rgb(187, 129, 199) 0%, rgba(148,187,233,1) 100%); */
+    
+    background-color: rgba(48, 72, 170, 0.405);
+    
+}
+
+
+@media screen and (max-width: 600px) {
+   
+/* ---------- Header ---------- */
+header {
+    height: 100px;
+    border-radius: 10px;
+    
+}
+.title {
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 4px;
+    color: white;
+    /* font-size: 40px; */
+    font-size: calc(25px + 1vw);
+    text-align: center;
+    margin-top: 10%;
+    
+}
+
+
+
+/* ---------- Main ---------- */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-container {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 95%;
+    height: 70%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(147, 110, 221, 0.419);
+    box-shadow: 1px 5px 20px rgba(252, 252, 252, 0.226);
+}
+
+/* ----- List----- */
+ul {
+    padding-inline-start: 0%;
+    
+    overflow-wrap: break-word;
+}
+.list {
+    display: flex;
+    flex-direction: column;
+    max-width: 95%;
+    height: 70%;
+    
+    justify-content: left;
+    align-items: left;
+
+    overflow-wrap: break-word;
+
+}
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: rgba(225, 210, 210, 0.268) 1px solid;
+    padding: 5px;
+    overflow: hidden;
+    color: white;
+    font-size: 15px;
+    max-width: 100%;
+
+    overflow-wrap: break-word;
+
+}
+
+.list-item:focus {
+    outline: none;
+}
+
+
+#input-add {
+    width: 70%;
+    height: 30px;
+    border-radius: 20px;
+    border: none;
+    margin: 10px;
+    font-family: 'Roboto', sans-serif;
+    padding: 5px;
+    padding-left: 10px;
+    font-size: calc(10px + 1vw);
+    font-weight: 300;
+    
+}
+
+#input-add:focus {
+    outline: none;
+    border: solid rgba(128, 128, 128, 0.377) 1px;
+}
+
+#input-add::placeholder {
+    font-size: calc(10px + 1vw);
+}
+
+/*Btn generic 1*/
+.btn-1 {
+    border: none;
+    border-radius: 40px;
+    width: 100px;
+    height: 35px;
+    padding: 10px;
+    margin-top: 5px;
+    background-color: rgb(83, 83, 155);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.btn-1:hover {
+    animation: pulse;
+    animation-duration: 1s;
+
+}
+
+
+
+
+/*Btn delete item*/
+.btn-delete, .btn-checked {
+    border: none;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 5px 5px rgba(228, 220, 220, 0.226);
+    cursor: pointer;
+}
+.btn-delete {
+    background-color: rgba(99, 7, 73, 0.659);
+}
+.btn-delete:hover {
+    background-color: rgb(51, 3, 38);
+    
+}
+
+.btn-checked {
+    background-color: rgb(49, 20, 107, 0.659);
+}
+
+.btn-checked:hover {
+    background-color: rgb(33, 13, 73);
+}
+
+.btn-icon {
+    color: white;
+}
+
+.btn-icon:hover {
+    transform : scale(1.1);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* ---------- Modal ---------- */
+.modal {
+    width: 40%;
+    height: 20%;
+    border-radius: 10px;
+    color: rgb(41, 41, 99);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgb(217, 217, 226);
+    position: absolute;
+    top: 30%;
+
+}
+
+.hidden {
+    display: none;
+}
+
+.checked {
+    text-decoration: line-through gray 2px;
+}
+
+/* ---------- Empty ---------- */
+.advice-empty {
+    font-size: calc(8px + 1vw);
+   margin-top: 10%;
+   color: rgb(255, 255, 255);
+  
+   animation: bounce;
+   animation-duration: 2s;
+
+}
+
+
+
+/* ---------- Footer ---------- */
+.footer-text {
+    font-size: calc(3px + 1vw);
+    color: rgb(255, 255, 255);
+    position: relative;
+    bottom: 0;
+    margin-top: 100px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    
+}
+
+}
+
+
+
+/*TABLET*/
+
+@media screen and (min-width: 601px) and (max-width: 900px) {
+    header {
+        height: 100px;
+        border-radius: 10px;
+        
+    }
+    .title {
+        font-family: 'Red Hat Display', sans-serif;
+        letter-spacing: 4px;
+        color: white;
+        /* font-size: 40px; */
+        font-size: calc(25px + 1vw);
+        text-align: center;
+        margin-top: 5%;
+        
+    }
+    
+    
+    
+    /* ---------- Main ---------- */
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .list-container {
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 95%;
+        height: 70%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(147, 110, 221, 0.419);
+        box-shadow: 1px 5px 20px rgba(252, 252, 252, 0.226);
+    }
+    
+    /* ----- List----- */
+    ul {
+        padding-inline-start: 0%;
+        
+        overflow-wrap: break-word;
+    }
+    .list {
+        display: flex;
+        flex-direction: column;
+        max-width: 95%;
+        height: 70%;
+        
+        justify-content: left;
+        align-items: left;
+    
+        overflow-wrap: break-word;
+    
+    }
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        border-bottom: rgba(225, 210, 210, 0.268) 1px solid;
+        padding: 5px;
+        overflow: hidden;
+        color: white;
+        font-size: 15px;
+        max-width: 100%;
+    
+        overflow-wrap: break-word;
+    
+    }
+    
+    .list-item:focus {
+        outline: none;
+    }
+    
+    
+    #input-add {
+        width: 70%;
+        height: 30px;
+        border-radius: 20px;
+        border: none;
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        padding: 5px;
+        padding-left: 10px;
+        font-size: calc(10px + 1vw);
+        font-weight: 300;
+        
+    }
+    
+    #input-add:focus {
+        outline: none;
+        border: solid rgba(128, 128, 128, 0.377) 1px;
+    }
+    
+    #input-add::placeholder {
+        font-size: calc(10px + 1vw);
+    }
+    
+    /*Btn generic 1*/
+    .btn-1 {
+        border: none;
+        border-radius: 40px;
+        width: 100px;
+        height: 35px;
+        padding: 10px;
+        margin-top: 5px;
+        background-color: rgb(83, 83, 155);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    
+    .btn-1:hover {
+        animation: pulse;
+        animation-duration: 1s;
+    
+    }
+    
+    
+    
+    
+    /*Btn delete item*/
+    .btn-delete, .btn-checked {
+        border: none;
+        border-radius: 100%;
+        width: 30px;
+        height: 30px;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 5px 5px rgba(228, 220, 220, 0.226);
+        cursor: pointer;
+    }
+    .btn-delete {
+        background-color: rgba(99, 7, 73, 0.659);
+    }
+    .btn-delete:hover {
+        background-color: rgb(51, 3, 38);
+        
+    }
+    
+    .btn-checked {
+        background-color: rgb(49, 20, 107, 0.659);
+    }
+    
+    .btn-checked:hover {
+        background-color: rgb(33, 13, 73);
+    }
+    
+    .btn-icon {
+        color: white;
+    }
+    
+    .btn-icon:hover {
+        transform : scale(1.1);
+    }
+    
+    .btn-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    /* ---------- Modal ---------- */
+    .modal {
+        width: 40%;
+        height: 20%;
+        border-radius: 10px;
+        color: rgb(41, 41, 99);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(217, 217, 226);
+        position: absolute;
+        top: 30%;
+    
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .checked {
+        text-decoration: line-through gray 2px;
+    }
+    
+    /* ---------- Empty ---------- */
+    .advice-empty {
+        font-size: calc(8px + 1vw);
+       margin-top: 10%;
+       color: rgb(255, 255, 255);
+      
+       animation: bounce;
+       animation-duration: 2s;
+    
+    }
+    
+    
+    
+    /* ---------- Footer ---------- */
+    .footer-text {
+        font-size: calc(3px + 1vw);
+        color: rgb(255, 255, 255);
+        position: relative;
+        bottom: 0;
+        margin-top: 100px;
+        text-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+        
+    }
+
+
+}
+
+
+
+/* Responsive - DESKTOP */
+
+@media screen and (min-width: 901px) {
+
+    /* ---------- Header ---------- */
+    header {
+        height: 100px;
+        border-radius: 10px;
+        
+    }
+    .title {
+        font-family: 'Red Hat Display', sans-serif;
+        letter-spacing: 4px;
+        color: white;
+        /* font-size: 40px; */
+        font-size: calc(30px + 1vw);
+        text-align: center;
+        margin-top: 2%;
+        
+    }
+    
+    
+    
+    /* ---------- Main ---------- */
+    
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .list-container {
+        margin-top: 20px;
+        border-radius: 10px;
+        width: 70%;
+        height: 70%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(147, 110, 221, 0.419);
+        box-shadow: 1px 5px 20px rgba(252, 252, 252, 0.226);
+    }
+    
+    /* ----- List----- */
+    .list {
+        display: flex;
+        flex-direction: column;
+        width: 80%;
+        height: 70%;
+    
+    }
+    .list-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: rgba(225, 210, 210, 0.268) 1px solid;
+        padding: 5px;
+        overflow: hidden;
+        color: white;
+        /* font-size: 18px; */
+        font-size: 19px;
+    
+    }
+    
+    .list-item:focus {
+        outline: none;
+    }
+    
+    
+    #input-add {
+        width: 50%;
+        height: 40px;
+        border-radius: 20px;
+        border: none;
+        margin: 10px;
+        font-family: 'Roboto', sans-serif;
+        padding: 5px;
+        padding-left: 10px;
+        font-size: calc(2px + 1vw);
+    }
+    
+    #input-add:focus {
+        outline: none;
+        border: solid rgba(128, 128, 128, 0.377) 1px;
+    }
+    
+    #input-add::placeholder {
+        font-size: calc(4px + 1vw);
+    }
+    
+    /*Btn generic 1*/
+    .btn-1 {
+        border: none;
+        border-radius: 40px;
+        width: 100px;
+        height: 35px;
+        padding: 10px;
+        margin-top: 5px;
+        background-color: rgb(83, 83, 155);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        
+    }
+    
+    .btn-1:hover {
+        animation: pulse;
+        animation-duration: 1s;
+    
+    }
+    
+    
+    
+    
+    /*Btn delete item*/
+    .btn-delete, .btn-checked {
+        border: none;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 1px 5px 5px rgba(228, 220, 220, 0.226);
+        cursor: pointer;
+    }
+    .btn-delete {
+        background-color: rgba(99, 7, 73, 0.659);
+    }
+    .btn-delete:hover {
+        background-color: rgb(51, 3, 38);
+        
+    }
+    
+    .btn-checked {
+        background-color: rgb(49, 20, 107, 0.659);
+    }
+    
+    .btn-checked:hover {
+        background-color: rgb(33, 13, 73);
+    }
+    
+    .btn-icon {
+        color: white;
+    }
+    
+    .btn-icon:hover {
+        transform : scale(1.1);
+    }
+    
+    .btn-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    /* ---------- Modal ---------- */
+    .modal {
+        width: 40%;
+        height: 20%;
+        border-radius: 10px;
+        color: rgb(41, 41, 99);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        background-color: rgb(217, 217, 226);
+        position: absolute;
+        top: 30%;
+    
+    }
+    
+    .hidden {
+        display: none;
+    }
+    
+    .checked {
+        text-decoration: line-through gray 2px;
+    }
+    
+    /* ---------- Empty ---------- */
+    .advice-empty {
+        font-size: calc(8px + 1vw);
+       margin-top: 10%;
+       color: rgb(255, 255, 255);
+      
+       animation: bounce;
+       animation-duration: 2s;
+    
+    }
+    
+    
+    
+    /* ---------- Footer ---------- */
+    .footer-text {
+        font-size: calc(3px + 1vw);
+        color: rgb(255, 255, 255);
+        position: relative;
+        bottom: 0;
+        margin-top: 100px;
+        text-align: center;
+    }
+    
+    a {
+        text-decoration: none;
+        
+    }
+    
+    }

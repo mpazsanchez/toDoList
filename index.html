@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+    <title>Mis tareas</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Mis tareas</h1>
+    </header>
+    
+    <div class="date"></div>
+    
+    <main class="main-container">
+        <input type="text"  name="Agregar tarea" id="input-add" placeholder=" Agregar tarea" value="">
+        <!-- maxlength="25" -->
+        <button class="btn-1 btn-add">Agregar</button>
+        
+
+        <div class="list-container">
+        </div>
+
+        <div class="advice-empty">El listado está vacio, comienza agregando elementos</div>
+
+        <div class="modal hidden">
+            <h4>No se puede agregar un item vacio</h4>
+            <button class="btn-1 btn-closeModal">Aceptar</button>
+        </div>
+
+        <div class="modal hidden modal-edit">
+            <h4>Editar</h4>
+            <input type="text" maxlength="60" name="Editar tarea" id="input-edit" placeholder=" Editar tarea" value="">
+
+            <button class="btn-1 btn-saveModal">Aceptar</button>
+            <button class="btn-1 btn-cancelModal">Cancelar</button>
+        </div>
+
+    </main>
+
+    <footer>
+        <p class="footer-text">Desarrollado por <a href="https://linkedin.com/in/mpazsanchez">Maria Paz Sanchez</a></p>
+    </footer>
+
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js" data-auto-replace-svg="nest"></script>
+<script src="javascript.js"></script>
+<!-- <script src="javascriptFunctions.js"></script> -->
+
+</body>
+
+</html>
